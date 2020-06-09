@@ -15,12 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dvv-fN-H5s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dvv-fN-H5s">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihj-Um-n9s">
+                                <rect key="frame" x="0.0" y="692" width="414" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ckQ-qN-LgJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dvv-fN-H5s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7tE-VV-gva"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ihj-Um-n9s" secondAttribute="bottom" constant="145" id="94Y-7R-MVz"/>
+                            <constraint firstItem="ihj-Um-n9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rhm-N1-1Xp"/>
+                            <constraint firstItem="ihj-Um-n9s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eoU-SF-XR9"/>
+                            <constraint firstAttribute="bottom" secondItem="Dvv-fN-H5s" secondAttribute="bottom" id="gi9-UK-AIy"/>
+                            <constraint firstItem="Dvv-fN-H5s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="shX-mF-ikJ"/>
+                            <constraint firstItem="Dvv-fN-H5s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tLM-kg-hH0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Kf-Ba-K1u">
@@ -31,6 +49,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="confidenceLabel" destination="ihj-Um-n9s" id="vJk-3n-Alh"/>
                         <outlet property="imageView" destination="Dvv-fN-H5s" id="72C-Pi-xzL"/>
                         <outlet property="navigationBar" destination="8Kf-Ba-K1u" id="Ya4-gI-LHz"/>
                     </connections>

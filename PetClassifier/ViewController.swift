@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var confidenceLabel: UILabel!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -49,6 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else { fatalError("Results could not be processed") }
             if let firstResult = results.first {
                 self.navigationBar.title = "\(firstResult.identifier)"
+                self.confidenceLabel.text = "Confidence: \(firstResult.confidence * 100) %"
             }
             
             
